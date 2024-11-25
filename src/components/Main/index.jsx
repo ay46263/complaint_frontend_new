@@ -8,7 +8,7 @@ const Main = () => {
 //  const toggleDropdown = () => { setIsDropdownOpen(!isDropdownOpen);
 
   useEffect(() => {
-    axios.get("http://localhost:8000/getReports")
+    axios.get("https://node-complaint-server.onrender.com/getReports")
       .then(response => {
         setComplaints(response.data);
       })
@@ -32,7 +32,7 @@ const Main = () => {
     }));
 
     // Update status on backend
-    axios.put(`http://localhost:8000/updateStatus/${reportId}`, { status: newStatus })
+    axios.put(`https://node-complaint-server.onrender.com/updateStatus/${reportId}`, { status: newStatus })
       .then(response => {
         console.log("Status updated successfully:", response.data);
       })

@@ -9,7 +9,7 @@ const SingleReport = () => {
   const [hoveredDiv, setHoveredDiv] = useState(null); // State to track which div is hovered
 
   useEffect(() => {
-    axios.get(`http://localhost:8000/singleReport/${id}`)
+    axios.get(`https://node-complaint-server.onrender.com/singleReport/${id}`)
       .then(response => {
         setReport(response.data);
         console.log(response.data);
